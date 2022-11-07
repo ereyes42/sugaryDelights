@@ -7,7 +7,7 @@ const brand = ref('🍭Sugary Delights')
   <nav>
     <div class="wrapper">
       <RouterLink :to="{ name: 'Home' }" class="brand">
-        <!--RouterLink (links back to MainCom)-->
+        <!--RouterLink (links back to MainPage)-->
         <span class="brand-title">{{ brand }}</span>
       </RouterLink>
       <div class="menu">
