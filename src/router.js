@@ -1,19 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomePage from '@/views/HomePage.vue'
+import HomePage from '@/components/HomePage.vue'
+import ChocPage from '@/components/ChocPage.vue'
+import SpecPage from '@/components/SpecPage.vue'
+import ClearPage from '@/components/ClearPage.vue'
+import CandPage from '@/components/CandPage.vue'
+import CheckPage from '@/components/CheckPage.vue'
+import LoginPage from '@/components/LoginPage.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
-  { path: '/choc', name: 'Chocolates', component: () => import('@/views/ChocPage.vue') },
-  { path: '/spec', name: 'Specialties', component: () => import('@/views/SpecPage.vue') },
-  { path: '/clear', name: 'Clearance', component: () => import('@/views/ClearPage.vue') },
-  { path: '/cand', name: 'Candies', component: () => import('@/views/CandPage.vue') },
-  { path: '/check', name: 'Checkout', component: () => import('@/views/CheckPage.vue') },
+  { path: '/choco', name: 'Chocolates', component: ChocPage },
+  { path: '/spec', name: 'Specialties', component: SpecPage },
+  { path: '/cand', name: 'Candies', component: CandPage },
+  { path: '/clear', name: 'Clearance', component: ClearPage },
+  { path: '/check', name: 'Checkout', component: CheckPage },
+  { path: '/login', name: 'Login', component: LoginPage },
 ]
 
-const router = createRouter({
+export default createRouter({
   history: createWebHistory(),
   routes,
 })
-
-export default router
