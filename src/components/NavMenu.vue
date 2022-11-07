@@ -1,7 +1,11 @@
 <template>
   <nav>
     <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/other">Other</RouterLink>
+    <RouterLink to="/choc">Chocolates</RouterLink>
+    <RouterLink to="/spec">Specialties</RouterLink>
+    <RouterLink to="/clear">Clearance</RouterLink>
+    <RouterLink to="/cand">Candies</RouterLink>
+    <RouterLink to="/check">🛒</RouterLink>
   </nav>
 </template>
 
