@@ -11,14 +11,17 @@
       <div class="slide-text">Sweets For Any Occasion</div>
     </div>
   </div>
+  <div class="card" @click="selectCard">card</div>
+  <div class="card" @click="selectCard">card</div>
 </template>
 
 <style scoped lang="postcss">
 .slide {
-  @apply absolute h-3/4 w-full cursor-pointer shadow-md;
+  @apply relative h-auto w-full cursor-pointer overflow-hidden shadow-md;
   &-image {
+    @apply left-0 right-0 h-auto max-w-full;
     img {
-      @apply absolute h-full w-full rounded-md fill-current object-cover;
+      @apply relative left-0 right-0 h-auto w-full object-cover;
     }
   }
   &-title {
@@ -30,5 +33,9 @@
   &-btn {
     @apply absolute top-1/2 left-3/4 rounded-md border-2 border-gray-400 bg-violet-200 p-2 text-center text-2xl opacity-90 hover:font-semibold;
   }
+}
+
+.card {
+  @apply rounded-lg bg-yellow-100 p-4 shadow-lg;
 }
 </style>
