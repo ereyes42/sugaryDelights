@@ -1,5 +1,9 @@
 <script setup>
 import { ref } from 'vue'
+
+import { useAuth } from '@/helpers/useAuth'
+const { isAuthenticated, logout } = useAuth()
+
 const brand = ref('🍭Sugary Delights')
 </script>
 
@@ -14,8 +18,13 @@ const brand = ref('🍭Sugary Delights')
         <RouterLink :to="{ name: 'Chocolates' }" href="#" class="menu-item">Chocolates</RouterLink>
         <RouterLink :to="{ name: 'Specialties' }" href="#" class="menu-item">Specialties</RouterLink>
         <RouterLink :to="{ name: 'Candies' }" href="#" class="menu-item">Candies</RouterLink>
-        <RouterLink :to="{ name: 'Checkout' }" href="#" class="menu-cart">🛒</RouterLink>
-        <RouterLink :to="{ name: 'Login' }" href="#" class="menu-login">Login</RouterLink>
+        <div v-if="isAuthenticated">
+          <RouterLink :to="{ name: 'Checkout' }" href="#" class="menu-cart">🛒</RouterLink>
+          <button class="menu-logout" @click="logout">Logout</button>
+        </div>
+        <div v-else>
+          <RouterLink :to="{ name: 'Login' }" href="#" class="menu-login">Login</RouterLink>
+        </div>
       </div>
     </div>
   </nav>
@@ -38,6 +47,9 @@ nav {
       }
       &-login {
         @apply rounded-md bg-blue-400 py-1 px-1 font-bold hover:font-extrabold hover:text-gray-700;
+      }
+      &-logout {
+        @apply mx-2 rounded-md bg-blue-400 py-1 px-1 font-bold hover:font-extrabold hover:text-black;
       }
     }
   }
