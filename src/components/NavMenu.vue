@@ -23,7 +23,7 @@ const brand = ref('🍭Sugary Delights')
 
 <style scoped lang="postcss">
 nav {
-  @apply flex h-24 items-center justify-between bg-blue-200 text-rose-500;
+  @apply flex h-24 items-center justify-between bg-blue-200 text-sky-900;
   .wrapper {
     @apply container mx-auto flex w-full items-center justify-between;
     .brand {
@@ -34,10 +34,10 @@ nav {
     .menu {
       @apply flex gap-4;
       &-item {
-        @apply py-1 px-1 font-bold hover:font-extrabold hover:text-pink-700;
+        @apply py-1 px-1 font-bold hover:font-extrabold hover:text-gray-700;
       }
       &-login {
-        @apply rounded-md bg-blue-400 py-1 px-1 font-bold hover:font-extrabold hover:text-pink-700;
+        @apply rounded-md bg-blue-400 py-1 px-1 font-bold hover:font-extrabold hover:text-gray-700;
       }
     }
   }
