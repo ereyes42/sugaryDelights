@@ -1,5 +1,14 @@
+<script setup>
+import BaseCard from '@/cards/BaseCard.vue'
+</script>
+
 <template>
-  <main class="flex min-h-screen items-center justify-center">
-    <h1 class="text-6xl font-thin text-slate-800">I'm Candies Page</h1>
+  <div class="mt-5 py-2 text-center text-3xl font-bold text-sky-900">
+    <p>Candies</p>
+  </div>
+  <main class="flex h-auto items-center justify-center">
+    <div class="container mx-5 grid grid-cols-5 gap-5 py-5">
+      <BaseCard v-for="n in 10" :key="n.id" />
+    </div>
   </main>
 </template>
