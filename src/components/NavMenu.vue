@@ -19,7 +19,7 @@ const brand = ref('🍭Sugary Delights')
         <RouterLink :to="{ name: 'Specialties' }" href="#" class="menu-item">Specialties</RouterLink>
         <RouterLink :to="{ name: 'Candies' }" href="#" class="menu-item">Candies</RouterLink>
         <div v-if="isAuthenticated">
-          <RouterLink :to="{ name: 'Checkout' }" href="#" class="menu-cart">🛒</RouterLink>
+          <RouterLink :to="{ name: 'Checkout' }" href="#" class="menu-cart">📜</RouterLink>
           <button class="menu-logout" @click="logout">Logout</button>
         </div>
         <div v-else>

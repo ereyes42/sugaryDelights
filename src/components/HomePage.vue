@@ -49,11 +49,6 @@ const fullName2 = `${firstName2} ${lastName2}`
       <p class="about-desc">{{ faker.lorem.paragraphs(3) }}</p>
     </div>
   </div>
-  <footer>
-    <div class="footer">
-      <p class="brand-title">© Sugary Delights 2022</p>
-    </div>
-  </footer>
 </template>
 
 <style scoped lang="postcss">
@@ -77,7 +72,7 @@ const fullName2 = `${firstName2} ${lastName2}`
 }
 
 .about {
-  @apply container mx-auto flex w-4/5 flex-col gap-1 py-2;
+  @apply container mx-auto flex w-4/5 flex-col gap-1 pt-2 pb-32;
   &-title {
     @apply mt-2 text-center text-3xl font-bold text-sky-900;
   }
@@ -108,15 +103,6 @@ const fullName2 = `${firstName2} ${lastName2}`
 
   &-name {
     @apply mb-4 text-center font-bold;
-  }
-}
-
-.footer {
-  @apply container bg-blue-200 py-5;
-  .brand {
-    &-title {
-      @apply text-center text-sm text-sky-900;
-    }
   }
 }
 </style>

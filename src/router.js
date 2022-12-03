@@ -9,6 +9,7 @@ import SpecPage from '@/components/SpecPage.vue'
 import CandPage from '@/components/CandPage.vue'
 import CheckPage from '@/components/CheckPage.vue'
 import LoginPage from '@/components/LoginPage.vue'
+import NotFound from '@/components/NotFound.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
@@ -17,6 +18,7 @@ const routes = [
   { path: '/cand', name: 'Candies', component: CandPage },
   { path: '/check', name: 'Checkout', component: CheckPage, meta: { requireAuth: true } },
   { path: '/login', name: 'Login', component: LoginPage },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
 const router = createRouter({
