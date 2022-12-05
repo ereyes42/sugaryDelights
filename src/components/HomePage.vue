@@ -18,7 +18,9 @@ const fullName2 = `${firstName2} ${lastName2}`
       />
     </div>
     <div class="center">
-      <button class="slide-btn">Shop Now</button>
+      <button class="slide-btn" onclick="window.location.href='https://sugarydelights.emreyes.site/login';">
+        Shop Now
+      </button>
     </div>
     <div class="slide-text">Sweets For Any Occasion</div>
   </div>
