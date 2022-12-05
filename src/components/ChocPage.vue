@@ -1,4 +1,19 @@
-<script setup></script>
+<script setup>
+import { nanoid } from 'nanoid'
+import { items } from '@/helpers/useWishlist'
+
+const itemOne = 'Chocolate Bar'
+const itemTwo = 'Chocolate Hearts'
+const itemThree = 'Peanut Butter Cups'
+const itemFour = 'Chocolate Nutty Bars'
+const itemFive = 'Variety of Chocolate'
+
+const addItem = (name) => {
+  if (name) {
+    items.value.push({ id: nanoid(), name: name })
+  }
+}
+</script>
 
 <template>
   <div class="mt-5 py-2 text-center text-3xl font-bold text-sky-900">
@@ -16,6 +31,7 @@
           <button
             type="submit"
             class="my-2 mx-2 rounded-md bg-sky-900 px-1 py-1 text-center font-bold text-blue-200 shadow-md ring-1 ring-blue-200"
+            @click="addItem(itemOne)"
           >
             Add to Wishlist
           </button>
@@ -31,6 +47,7 @@
           <button
             type="submit"
             class="my-2 mx-2 rounded-md bg-sky-900 px-1 py-1 text-center font-bold text-blue-200 shadow-md ring-1 ring-blue-200"
+            @click="addItem(itemTwo)"
           >
             Add to Wishlist
           </button>
@@ -46,6 +63,7 @@
           <button
             type="submit"
             class="my-2 mx-2 rounded-md bg-sky-900 px-1 py-1 text-center font-bold text-blue-200 shadow-md ring-1 ring-blue-200"
+            @click="addItem(itemThree)"
           >
             Add to Wishlist
           </button>
@@ -57,10 +75,11 @@
           src="https://images.unsplash.com/photo-1627647227768-705244233b56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
         />
         <div class="p-1">
-          <h2 class="text-xl font-semibold text-gray-800">ChocolateNutty Bars</h2>
+          <h2 class="text-xl font-semibold text-gray-800">Chocolate Nutty Bars</h2>
           <button
             type="submit"
             class="my-2 mx-2 rounded-md bg-sky-900 px-1 py-1 text-center font-bold text-blue-200 shadow-md ring-1 ring-blue-200"
+            @click="addItem(itemFour)"
           >
             Add to Wishlist
           </button>
@@ -76,6 +95,7 @@
           <button
             type="submit"
             class="my-2 mx-2 rounded-md bg-sky-900 px-1 py-1 text-center font-bold text-blue-200 shadow-md ring-1 ring-blue-200"
+            @click="addItem(itemFive)"
           >
             Add to Wishlist
           </button>

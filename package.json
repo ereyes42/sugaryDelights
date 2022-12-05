@@ -14,8 +14,10 @@
   },
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
+    "@vueuse/core": "^9.6.0",
     "@vueuse/firebase": "^9.6.0",
     "firebase": "^9.14.0",
+    "nanoid": "^4.0.0",
     "postcss-image-sizes": "^0.1.0",
     "postcss-longshadow-text": "^1.1.2",
     "postcss-text-stroke": "^0.0.4",
